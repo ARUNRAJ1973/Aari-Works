@@ -1,0 +1,122 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
+  "designs": [
+    {
+      "id": "1",
+      "name": "Casual Design 1",
+      "price": 1555,
+      "offerPrice": 1350,
+      "image": "/images/1.jpeg",
+      "category": "casual"
+    },
+    {
+      "id": "2",
+      "name": "Casual Design 2",
+      "price": 1400,
+      "offerPrice": 1250,
+      "image": "/images/1.jpeg",
+      "category": "casual"
+    },
+    {
+      "id": "3",
+      "name": "Bridal Design 1",
+      "price": 3500,
+      "offerPrice": 3000,
+      "image": "/images/1.jpeg",
+      "category": "bridal"
+    },
+    {
+      "id": "4",
+      "name": "Bridal Design 2",
+      "price": 4000,
+      "offerPrice": 3500,
+      "image": "/images/1.jpeg",
+      "category": "bridal"
+    },
+    {
+      "id": "7",
+      "name": "Modern Design 1",
+      "price": 1800,
+      "offerPrice": 1500,
+      "image": "/images/1.jpeg",
+      "category": "modern"
+    },
+    {
+      "id": "8",
+      "name": "Modern Design 2",
+      "price": 2000,
+      "offerPrice": 1800,
+      "image": "/images/1.jpeg",
+      "category": "modern"
+    }
+  ],
+  "carts": [
+    {
+      "id": "470b",
+      "customerName": "arun",
+      "items": [
+        {
+          "designId": "2",
+          "name": "Casual Design 2",
+          "price": 1400,
+          "offerPrice": 1250,
+          "image": "/images/1.jpeg",
+          "quantity": 1
+        },
+        {
+          "designId": "7",
+          "name": "Modern Design 1",
+          "price": 1800,
+          "offerPrice": 1500,
+          "image": "/images/1.jpeg",
+          "quantity": 1
+        },
+        {
+          "designId": "8",
+          "name": "Modern Design 2",
+          "price": 2000,
+          "offerPrice": 1800,
+          "image": "/images/1.jpeg",
+          "quantity": 1
+        },
+        {
+          "designId": "4",
+          "name": "Bridal Design 2",
+          "price": 4000,
+          "offerPrice": 3500,
+          "image": "/images/1.jpeg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "10ef",
+      "customerName": "john",
+      "items": [
+        {
+          "designId": "1",
+          "name": "Casual Design 1",
+          "price": 1555,
+          "offerPrice": 1350,
+          "image": "/images/1.jpeg",
+          "quantity": 1
+        },
+        {
+          "designId": "2",
+          "name": "Casual Design 2",
+          "price": 1400,
+          "offerPrice": 1250,
+          "image": "/images/1.jpeg",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}

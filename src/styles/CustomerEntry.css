@@ -1,0 +1,126 @@
+@import url('./Theme.css');
+
+.contact-info {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.entry-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
+}
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 30px;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border: 1px solid var(--border-light);
+}
+
+.entry-title {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.aari-info {
+  margin-bottom: 20px;
+}
+
+.aari-info p {
+  margin: 5px 0;
+  font-size: 20px !important;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.aari-infos {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.aari-infos p {
+  margin: 5px 0;
+  font-size: 14px !important;
+  color: var(--text-color);
+}
+
+.shop-address {
+  margin-bottom: 30px;
+}
+
+.shop-address p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.entry-input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.entry-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.entry-button {
+  padding: 12px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .entry-form {
+    width: 85%;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .entry-form {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .entry-form {
+    width: 95%;
+    padding: 15px;
+  }
+}

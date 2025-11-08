@@ -1,0 +1,134 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.flow-options {
+  display: flex;
+  gap: 2rem;
+}
+
+.flow-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.flow-option:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px var(--shadow-dark);
+  border-color: var(--secondary-color);
+}
+
+.flow-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.flow-option:hover::before {
+  opacity: 1;
+}
+
+.flow-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.flow-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s ease;
+}
+
+.flow-option:hover .flow-icon {
+  transform: scale(1.1);
+}
+
+.customer-icon {
+  color: #ff6b6b;
+}
+
+.admin-icon {
+  color: #4caf50;
+}
+
+.flow-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .flow-options {
+    flex-direction: column;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 448px) {
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .welcome-title {
+    font-size: 1.6rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .welcome-title {
+    font-size: 1.4rem;
+  }
+  
+  .flow-option {
+    width: 180px;
+  }
+}

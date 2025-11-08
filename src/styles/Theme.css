@@ -1,0 +1,48 @@
+:root {
+  /* Primary Theme Colors - Modern Purple/Gold Theme */
+  --primary-color: #6a4c93;
+  --primary-dark: #4a2c6a;
+  --primary-light: #8a6cb3;
+  
+  /* Secondary Theme Colors */
+  --secondary-color: #f4d03f;
+  --secondary-dark: #d4b035;
+  --secondary-light: #f7e05f;
+  
+  /* Accent Colors */
+  --accent-color: #e74c3c;
+  --accent-dark: #c0392b;
+  --accent-light: #ec7063;
+  
+  /* Background Colors */
+  --bg-primary: #f8f6ff;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0eef5;
+  
+  /* Text Colors */
+  --text-primary: #2c3e50;
+  --text-secondary: #5d6d7e;
+  --text-light: #85929e;
+  
+  /* Border Colors */
+  --border-color: #d5d8dc;
+  --border-light: #e8eaf0;
+  
+  /* Shadow Colors */
+  --shadow-color: rgba(106, 76, 147, 0.15);
+  --shadow-dark: rgba(106, 76, 147, 0.25);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-tertiary: #0f3460;
+    --text-primary: #e6e6ff;
+    --text-secondary: #b8b8ff;
+    --text-light: #9090ff;
+    --border-color: #2a2a4a;
+    --border-light: #3a3a5a;
+  }
+}
