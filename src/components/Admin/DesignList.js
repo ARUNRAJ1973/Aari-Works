@@ -144,7 +144,7 @@ const DesignList = () => {
   useEffect(() => {
     const fetchDesigns = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/designs?category=${category}`);
+        const response = await axios.get(`https://aari-works-db.onrender.com/designs?category=${category}`);
         setDesigns(response.data);
         setLoading(false);
       } catch (err) {
@@ -178,10 +178,10 @@ const DesignList = () => {
   const handleSave = async (design) => {
     try {
       // Update the design
-      await axios.put(`http://localhost:3001/designs/${design.id}`, design);
+      await axios.put(`https://aari-works-db.onrender.com/designs/${design.id}`, design);
 
       // Fetch all carts
-      const cartsResponse = await axios.get('http://localhost:3001/carts');
+      const cartsResponse = await axios.get('https://aari-works-db.onrender.com/carts');
       const allCarts = cartsResponse.data;
 
       // Update the design in each cart
@@ -194,7 +194,7 @@ const DesignList = () => {
         });
 
         if (JSON.stringify(updatedItems) !== JSON.stringify(cart.items)) {
-          await axios.patch(`http://localhost:3001/carts/${cart.id}`, { items: updatedItems });
+          await axios.patch(`https://aari-works-db.onrender.com/carts/${cart.id}`, { items: updatedItems });
         }
       }
 
