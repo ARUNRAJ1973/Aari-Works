@@ -135,7 +135,7 @@ const CustomerDesignList = () => {
   useEffect(() => {
     const fetchDesigns = async () => {
       try {
-        const response = await axios.get(`https://aari-works-db.onrender.com/designs?category=${category}`);
+        const response = await axios.get(`https://aari-db-json.onrender.com/designs?category=${category}`);
         setDesigns(response.data);
         setLoading(false);
       } catch (err) {
@@ -185,12 +185,12 @@ const CustomerDesignList = () => {
     // Update cart in server
     const saveCartToServer = async () => {
       try {
-        const existingCarts = await axios.get(`https://aari-works-db.onrender.com/carts?customerName=${customerName}`);
+        const existingCarts = await axios.get(`https://aari-db-json.onrender.com/carts?customerName=${customerName}`);
         
         if (existingCarts.data.length > 0) {
           // Update existing cart
           const cartId = existingCarts.data[0].id;
-          await axios.patch(`https://aari-works-db.onrender.com/carts/${cartId}`, {
+          await axios.patch(`https://aari-db-json.onrender.com/carts/${cartId}`, {
             items: cart.map(item => ({
               designId: item.id,
               name: item.name,
@@ -202,7 +202,7 @@ const CustomerDesignList = () => {
           });
         } else {
           // Create new cart
-          await axios.post('https://aari-works-db.onrender.com/carts', {
+          await axios.post('https://aari-db-json.onrender.com/carts', {
             customerName,
             items: cart.map(item => ({
               designId: item.id,

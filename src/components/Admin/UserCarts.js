@@ -129,7 +129,7 @@ const UserCarts = () => {
   useEffect(() => {
     const fetchCarts = async () => {
       try {
-        const response = await axios.get('https://aari-works-db.onrender.com/carts');
+        const response = await axios.get('https://aari-db-json.onrender.com/carts');
         setCarts(response.data);
         setLoading(false);
       } catch (err) {

@@ -16,7 +16,7 @@ const Login = () => {
     setError('');
     
     try {
-      const response = await axios.get('https://aari-works-db.onrender.com/users');
+      const response = await axios.get('https://aari-db-json.onrender.com/users');
       const user = response.data.find(
         (user) => user.username === username && user.password === password && user.role === 'admin'
       );
